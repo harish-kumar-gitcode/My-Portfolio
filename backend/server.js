@@ -8,7 +8,7 @@ const PORT = 3700 || 3500;
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.static(path.join(__dirname, '../assets')));
+app.use(express.static(path.join(__dirname, '../Assets')));
 
 app.get('/', (req,res)=>{
     res.sendFile(path.join(__dirname, '../index.html'))
