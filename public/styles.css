@@ -103,7 +103,7 @@ html, body{
 }
 
 .social-media a img:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: transform 0.3s ease;
 }
 /* This is the About Section */
@@ -138,10 +138,11 @@ html, body{
     width: 36%;
     height: 85%;
     border-radius: 20px;
+    opacity: 0;
 }
 
 .animate{
-    animation: slide-in 2s ease-in;
+    animation: slide-in 2s ease-in forwards;
 }
 
 @keyframes slide-in {
@@ -164,7 +165,7 @@ html, body{
 
 .about-text h3{
     font-size: 3em;
-    color: #DDF6D2 ;
+    color: #DDF6D2;
 }
 
 .about-text p{
@@ -180,23 +181,44 @@ html, body{
 
 .contact h3{
     display: inline-block;
+    width: 100%;
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 1.3em;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 6s steps(68);
 }
 
-/* Typing effect */
-@keyframes typing {
-    from { width: 0 ; border-right: 2px solid #000;}
-    to { width: 68ch; border-right: 2px solid #000;}
+.contact-animate{
+    animation: pop-In 3s ease-in forwards;
+}
 
+@keyframes pop-In {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    90%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
-  }
-  
-  /* Blinking cursor */
-  @keyframes blink {
-    50% { border-color: transparent }
+.contact h3 a{
+    display: inline-block;
+    text-decoration: none;
+    height: 100%;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    color: #ff9e00;
+    transition: transform 0.3s ease;
+    /* text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.377); */
+}
+
+.contact h3 a:hover{
+    transform: scale(1.05);
 }

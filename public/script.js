@@ -10,7 +10,9 @@ navLinks.forEach(link => {
 
 const aboutSection = document.querySelector('#about')
 const aboutImage = document.querySelector('.profile-container img');
+const contactInfo = document.querySelector('.contact h3');
 
 aboutSection.addEventListener("mouseenter",()=>{
   aboutImage.classList.add('animate');
+  contactInfo.classList.add('contact-animate')
 });
