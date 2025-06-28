@@ -11,7 +11,7 @@ const assetsPath = path.resolve(__dirname, '../Assets');
 
 app.use(cors());
 app.use(express.static(publicPath));
-app.use('/assets', express.static(assetsPath));
+app.use(express.static(assetsPath));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
